@@ -1,0 +1,75 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Comuni API CMS documentation",
+        "description": "This is API documentation of project Comuni.",
+        "termsOfService": "",
+        "version": "1.0.0"
+    },
+    "tags": [{
+        "name": "Authentication",
+        "description": "Group API Authentication"
+    }],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/api/v1/login": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Api login CMS",
+                "description": "",
+                "operationId": "placeOrder",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [{
+                    "in": "body",
+                    "name": "body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "/swagger/partials/cms/auth/loginBody.json"
+
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "/swagger/partials/cms/auth/loginResource.json"
+                        }
+                    },
+                    "422": {
+                        "description": "The given data was invalid.",
+                        "schema": {
+                            "$ref": "/swagger/partials/common/validate.json"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized.",
+                        "schema": {
+                            "$ref": "/swagger/partials/common/unauthorized.json"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "access_token": {
+            "type": "apiKey",
+            "name": "access_token",
+            "in": "header"
+        }
+    },
+    "definitions": {
+
+    }
+}

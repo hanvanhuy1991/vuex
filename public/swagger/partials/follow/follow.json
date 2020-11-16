@@ -1,0 +1,40 @@
+{
+    "post": {
+        "description": "Follow/Unfollow User",
+        "tags": ["Follow"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "user",
+                "in": "path",
+                "required": true,
+                "type": "integer"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Follow/Unfollow User",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "total_follows": 2,
+                            "is_followed": false
+                        }
+                    }
+                },
+                "schema": {
+                    "$ref": "/swagger/partials/follow/followResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

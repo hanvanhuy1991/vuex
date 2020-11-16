@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+        "total_follows": {
+            "type": "integer"
+        },
+        "is_followed": {
+            "type": "boolean"
+        }
+    }
+}

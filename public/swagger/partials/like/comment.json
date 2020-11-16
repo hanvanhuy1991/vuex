@@ -1,0 +1,41 @@
+{
+    "post": {
+        "description": "Like/Dislike Comment",
+        "tags": ["Like"],
+        "parameters": [
+            {
+                "name": "comment",
+                "in": "path",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Like/Dislike Comment",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "total_like": 4,
+                            "is_liked": true,
+                            "model_id": 1
+                        }
+                    }
+                },
+                "schema": {
+                    "$ref": "/swagger/partials/like/responseResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

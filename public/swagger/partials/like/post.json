@@ -1,0 +1,41 @@
+{
+    "post": {
+        "description": "Like/Dislike Post",
+        "tags": ["Like"],
+        "parameters": [
+            {
+                "name": "slug",
+                "in": "path",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Like/Dislike Post",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "total_like": 4,
+                            "is_liked": true,
+                            "model_id": 1
+                        }
+                    }
+                },
+                "schema": {
+                    "$ref": "/swagger/partials/like/responseResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

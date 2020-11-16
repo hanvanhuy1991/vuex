@@ -1,0 +1,72 @@
+{
+    "post": {
+        "description": "Create post.",
+        "tags": ["Post"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "title",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "content",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "location_name",
+                "in": "formData",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "location_lat",
+                "in": "formData",
+                "required": false,
+                "type": "number"
+            },
+            {
+                "name": "location_long",
+                "in": "formData",
+                "required": false,
+                "type": "number"
+            },
+            {
+                "name": "hash_tag_ids",
+                "in": "formData",
+                "required": false,
+                "type": "integer"
+            },
+            {
+                "name": "file",
+                "in": "formData",
+                "required": false,
+                "type": "file"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "If there is no error after creating post.",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "message": "Created post successfully!"
+                        }
+                    }
+                }
+            },
+            "422": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

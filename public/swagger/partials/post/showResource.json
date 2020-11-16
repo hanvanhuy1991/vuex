@@ -1,0 +1,136 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "hash_tags": {
+            "type": "array",
+            "xml": {
+                "wrapped": true
+            },
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "category_id": {
+                        "type": "integer"
+                    },
+                    "point": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "title": {
+            "type": "string"
+        },
+        "content": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "users": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "avatar": {
+                    "type": "string"
+                },
+                "is_business_account": {
+                    "type": "boolean"
+                },
+                "is_followed": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "created_at": {
+            "type": "string"
+        },
+        "total_views": {
+            "type": "integer"
+        },
+        "total_likes": {
+            "type": "integer"
+        },
+        "total_shares": {
+            "type": "integer"
+        },
+        "total_bookmarks": {
+            "type": "integer"
+        },
+        "total_comments": {
+            "type": "integer"
+        },
+        "is_liked": {
+            "type": "boolean"
+        },
+        "is_bookmarked": {
+            "type": "boolean"
+        },
+        "media_type": {
+            "type": "string"
+        },
+        "is_business_account": {
+            "type": "boolean"
+        },
+        "images": {
+            "type": "array",
+            "xml": {
+                "wrapped": true
+            },
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "image_path": {
+                        "type": "string"
+                    },
+                    "width": {
+                        "type": "integer"
+                    },
+                    "height": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "videos": {
+            "type": "array",
+            "xml": {
+                "wrapped": true
+            },
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "video_path": {
+                        "type": "string"
+                    },
+                    "width": {
+                        "type": "integer"
+                    },
+                    "height": {
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}

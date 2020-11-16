@@ -1,0 +1,115 @@
+{
+    "get": {
+        "description": "Get all Favorites.",
+        "tags": ["Favorites"],
+        "responses": {
+            "200": {
+                "description": "Get all topics.",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": [{
+                                "id": 1,
+                                "title": "Entertainment",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 2,
+                                "title": "Food and drink",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 3,
+                                "title": "Game",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 4,
+                                "title": "DIY & Tips",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 5,
+                                "title": "Family & relationships",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 6,
+                                "title": "Science & Education",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 7,
+                                "title": "Arts and music",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 8,
+                                "title": "Hot trend",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 9,
+                                "title": "Fitness and wellness",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 10,
+                                "title": "ASMR & slime",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 11,
+                                "title": "Vehichles",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 12,
+                                "title": "Pets",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 13,
+                                "title": "Drama story",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 14,
+                                "title": "Makeups",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 15,
+                                "title": "Shopping & Fashion",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 16,
+                                "title": "Anime",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 17,
+                                "title": "Sport and outdoors",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 18,
+                                "title": "Travel",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            },
+                            {
+                                "id": 19,
+                                "title": "Dance",
+                                "image": "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/ke17ZwdGBToddI8pDm48kIhenacT88MnrKvY1JbhsmgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcq1HrAUeB6VAkYYiXCSFJvA-_I3iLvlr6tW6s9hAWr_JP9HyLwihmRkgjjYg_eCzi/chup-anh-thuc-an-1.jpg"
+                            }
+                        ]
+                    }
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

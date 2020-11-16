@@ -1,0 +1,25 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: tranvanmy/laravel-workspace
+
+pipelines:
+  default:
+    - step:
+        name: Build and Check Convention
+        caches:
+          - composer
+        script:
+          - composer install
+          - npm install
+          - npm run eslint
+          - npm run psr2
+  # branches:
+  #   develop:
+  #     - step:
+  #         name: Deploy to development environment
+  #         deployment: test
+  #         script:
+  #           - dep deploy development --vv

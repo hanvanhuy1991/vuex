@@ -1,0 +1,120 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "content": {
+            "type": "string"
+        },
+        "users": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "avatar": {
+                    "type": "string"
+                }
+            }
+        },
+        "created_at": {
+            "type": "string"
+        },
+        "total_likes": {
+            "type": "integer"
+        },
+        "is_liked": {
+            "type": "boolean"
+        },
+        "images": {
+            "type": "array",
+            "xml": {
+                "wrapped": true
+            },
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "image_path": {
+                        "type": "string"
+                    },
+                    "width": {
+                        "type": "integer"
+                    },
+                    "height": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "child_comments": {
+            "type": "array",
+            "xml": {
+                "wrapped": true
+            },
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "content": {
+                        "type": "string"
+                    },
+                    "users": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "avatar": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "total_likes": {
+                        "type": "integer"
+                    },
+                    "is_liked": {
+                        "type": "boolean"
+                    },
+                    "images": {
+                        "type": "array",
+                        "xml": {
+                            "wrapped": true
+                        },
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "image_path": {
+                                    "type": "string"
+                                },
+                                "width": {
+                                    "type": "integer"
+                                },
+                                "height": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

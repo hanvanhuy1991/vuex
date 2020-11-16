@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "status": {
+            "type": "integer",
+            "format": "int32"
+        },
+        "message": {
+            "type": "string"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "type": "string"
+                },
+                "access_type": {
+                    "type": "string"
+                },
+                "expires_at": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

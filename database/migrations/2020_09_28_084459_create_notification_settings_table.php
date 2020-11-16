@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateNotificationSettingsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('notification_settings', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('user_id')->nullable();
+            $table->boolean('like')->nullable();
+            $table->boolean('comment')->nullable();
+            $table->boolean('follow')->nullable();
+            $table->boolean('message')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('notification_settings');
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "post": {
+        "description": "Login. If success, return access_token for the authenticated user.",
+        "tags": ["Authorization"],
+        "parameters": [{
+                "name": "email",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "token_device",
+                "in": "formData",
+                "required": false,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "If there is no error after logging in.",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "message": "Logged in successfully!",
+                        "data": {
+                            "access_token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiNTc1OTkyYTM2NGZjYzZiYzg4MmNkNjJlZmZhZDkyMzA3NDhhYmE4NmM4NDAwZTJkODJkZGU1Njk0ZTEzOTk5MTE0NWQxZmUyN2Q5Mzk0NjgiLCJpYXQiOjE1OTY0MzA2MjIsIm5iZiI6MTU5NjQzMDYyMiwiZXhwIjoxNjEyMzI4MjIxLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.i-MQEZYZqRSSfeFWxMN--DIWHc4NtOeh22gVD4W9LUHU0fiRrYO-EtbwR8ztZ8ubITX2Klc5BhZZ11cRWJFFxF0VUP-LnsnyOblcYWorWhB1TeKye8HZcmEKn6X4XTf8m0mI9BF6QLZumGxpNy0GZwiph-TpuGX_WmnerKlEIAdH_lsMYnb7-NSOgzgJoKl3P8DsMXWStZ2BY5mDPvVv0AR5JwSMY5cxVJHPipUYD7DLDxAzwByclpzWetj8K0mHfx7-bZVTs_tsmNBPZIKC1HcXwJYS3g_k3Alblp-w1EUqvicSvTh92SBmcc0tds765t3sV13c91-vkBDEA_VNPUzXOWsbmg7MkgvCcM9XvK7t1aWE15N4_-ZhI6IRI2Jljg87fsqKEF03JlbubTAcXQDtxwLcW5GjOy2w-jPT2_2BFEfcTotHNd8cL-dSKqL4VlVG92wMLSOQANw5z90azcna4xmLO0jH3RRF1j47ckBXS4oXo5AZcjADwGPvZ4KQnzZWZaNjPLVbuILxsfhhdMWmnPK3dSarOIp_igcRAu69jrfwQvkV7N_1jcRVrAYYjq_CM4eXlJ_DFbF1Ofslf_vZ2s-aljSAWX3Y7ekbm5395U8s_SgOEAgQcKX4X1sQrvX_bYJIHzJvdpleRIYe_pG3mV4Gql4FE4lnY4F8G-0",
+                            "token_type": "Bearer",
+                            "expires_at": "2020-08-17 04:57:03"
+                        }
+                    }
+                }
+            },
+            "422": {
+                "$ref": "/swagger/swagger.json#/responses/Validate"
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

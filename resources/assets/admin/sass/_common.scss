@@ -1,0 +1,58 @@
+@keyframes splashSpinner {
+    0% {
+        -webkit-transform: rotate(0);
+        -khtml-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -khtml-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.splash-screen {
+    z-index: 1000;
+}
+
+.splash-screen .splash-overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.28);
+    background: #fff;
+    opacity: 0.01;
+}
+
+.splash-screen .splash-spinner {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    z-index: 100000;
+    height: 40px;
+    width: 40px;
+    -webkit-animation: splashSpinner .8s infinite linear;
+    animation: splashSpinner .8s infinite linear;
+    border: 4px solid #007bff;
+    ;
+    border-right-color: transparent;
+    border-radius: 50%;
+}
+
+.app-body {
+    .splash-screen .splash-overlay {
+        z-index: 10000;
+        position: absolute;
+        top: 0px;
+    }
+    .splash-screen .splash-spinner {
+        position: absolute;
+        z-index: 10000;
+        right: 0px;
+    }
+}

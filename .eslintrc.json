@@ -1,0 +1,81 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/essential"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "ion": true,
+        "trans": true,
+        "axios": true,
+        "PropTypes": true,
+        "Echo": true,
+        "moment": true,
+        "_": true,
+        "$": true
+    },
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "vue"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": "error",
+        "no-debugger": "error",
+        "no-empty-function": "error",
+        "eqeqeq": [
+            "error",
+            "always",
+            {
+                "null": "ignore"
+            }
+        ],
+        "no-multi-spaces": [
+            "error",
+            {
+                "ignoreEOLComments": true,
+                "exceptions": {
+                    "Property": true,
+                    "BinaryExpression": true,
+                    "VariableDeclarator": true,
+                    "ImportDeclaration": true
+                }
+            }
+        ],
+        "key-spacing": ["error", { "afterColon": true }],
+        "no-lonely-if": "error",
+        "require-jsdoc": ["error", {
+            "require": {
+                "FunctionDeclaration": true,
+                "MethodDefinition": true,
+                "ClassDeclaration": true,
+                "ArrowFunctionExpression": true,
+                "FunctionExpression": false
+            }
+        }]
+    }
+}

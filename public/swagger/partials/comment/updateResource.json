@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "user_id": {
+            "type": "integer"
+        },
+        "parent_id": {
+            "type": "integer"
+        },
+        "content": {
+            "type": "string"
+        },
+        "created_by": {
+            "type": "integer"
+        },
+        "created_at": {
+            "type": "string"
+        },
+        "updated_at": {
+            "type": "string"
+        }
+    }
+}

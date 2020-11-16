@@ -1,0 +1,170 @@
+{
+    "type": "object",
+    "properties": {
+        "status": {
+            "type": "integer"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "xml": {
+                        "wrapped": true
+                    },
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "slug": {
+                                "type": "string"
+                            },
+                            "hash_tags": {
+                                "type": "array",
+                                "xml": {
+                                    "wrapped": true
+                                },
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "title": {
+                                            "type": "string"
+                                        },
+                                        "category_id": {
+                                            "type": "integer"
+                                        },
+                                        "point": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "users": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "avatar": {
+                                        "type": "string"
+                                    },
+                                    "is_business_account": {
+                                        "type": "boolean"
+                                    }
+                                }
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "total_views": {
+                                "type": "integer"
+                            },
+                            "total_likes": {
+                                "type": "integer"
+                            },
+                            "total_shares": {
+                                "type": "integer"
+                            },
+                            "total_bookmarks": {
+                                "type": "integer"
+                            },
+                            "total_comments": {
+                                "type": "integer"
+                            },
+                            "is_liked": {
+                                "type": "boolean"
+                            },
+                            "is_bookmarked": {
+                                "type": "boolean"
+                            },
+                            "media_type": {
+                                "type": "string"
+                            },
+                            "thumbnail": {
+                                "type": "string"
+                            },
+                            "thumbnail_width": {
+                                "type": "integer"
+                            },
+                            "thumbnail_height": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                "links": {
+                    "type": "array",
+                    "xml": {
+                        "wrapped": true
+                    },
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "first": {
+                                "type": "string"
+                            },
+                            "last": {
+                                "type": "string"
+                            },
+                            "prev": {
+                                "type": "string"
+                            },
+                            "next": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "type": "array",
+                    "xml": {
+                        "wrapped": true
+                    },
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "current_page": {
+                                "type": "integer"
+                            },
+                            "from": {
+                                "type": "integer"
+                            },
+                            "last_page": {
+                                "type": "integer"
+                            },
+                            "path": {
+                                "type": "string"
+                            },
+                            "per_page": {
+                                "type": "integer"
+                            },
+                            "to": {
+                                "type": "integer"
+                            },
+                            "total": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

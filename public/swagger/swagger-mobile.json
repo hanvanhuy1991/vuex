@@ -1,0 +1,218 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Comuni API Mobile documentation",
+        "description": "This is API documentation of project Comuni.",
+        "termsOfService": "",
+        "version": "1.0.0"
+    },
+    "tags": [{
+            "name": "Authorization",
+            "description": "Group API Authentication"
+        },
+        {
+            "name": "User",
+            "description": "Group API User"
+        },
+        {
+            "name": "Post",
+            "description": "Group API Post"
+        },
+        {
+            "name": "Favorites",
+            "description": "Group API Favorites"
+        },
+        {
+            "name": "Comment",
+            "description": "Group API Comment"
+        },
+        {
+            "name": "Like",
+            "description": "Group API Like"
+        },
+        {
+            "name": "Follow",
+            "description": "Group API Follow"
+        },
+        {
+            "name": "Category",
+            "description": "Group API Category"
+        },
+        {
+            "name": "Collection",
+            "description": "Group API Collection"
+        },
+        {
+            "name": "Topic",
+            "description": "Group API Topic"
+        },
+        {
+            "name": "Bookmark",
+            "description": "Group API Bookmark"
+        },
+        {
+            "name": "Search",
+            "description": "Group API Search"
+        },
+        {
+            "name": "Notifications",
+            "description": "Group API Notifications"
+        }
+    ],
+    "securityDefinitions": {
+        "ApiKeyAuth": {
+            "name": "Authorization",
+            "in": "header",
+            "type": "apiKey"
+        }
+    },
+    "schemes": ["http", "https"],
+    "paths": {
+        "/api/v1/register": {
+            "$ref": "/swagger/partials/auth/register.json"
+        },
+        "/api/v1/login": {
+            "$ref": "/swagger/partials/auth/login.json"
+        },
+        "/api/v1/check-email": {
+            "$ref": "/swagger/partials/auth/check-email.json"
+        },
+        "/api/v1/logout": {
+            "$ref": "/swagger/partials/auth/logout.json"
+        },
+        "/api/v1/forgot-password": {
+            "$ref": "/swagger/partials/auth/forgot-password.json"
+        },
+        "/api/v1/change-password": {
+            "$ref": "/swagger/partials/user/change-password.json"
+        },
+        "/api/v1/pages": {
+            "$ref": "/swagger/partials/page/page.json"
+        },
+        "/api/v1/users/{user}": {
+            "$ref": "/swagger/partials/user/profile.json"
+        },
+        "/api/v1/posts": {
+            "$ref": "/swagger/partials/post/index-store.json"
+        },
+        "/api/v1/posts?type=discovery": {
+            "$ref": "/swagger/partials/post/api/discoveryApi.json"
+        },
+        "/api/v1/posts?type=following": {
+            "$ref": "/swagger/partials/post/api/followingApi.json"
+        },
+        "/api/v1/favorites": {
+            "$ref": "/swagger/partials/favorites/get.json"
+        },
+        "/api/v1/posts/{slug}": {
+            "$ref": "/swagger/partials/post/show-update.json"
+        },
+        "/api/v1/posts/{slug}/comments": {
+            "$ref": "/swagger/partials/comment/getForPost.json"
+        },
+        "/api/v1/comments/{comment}/likes": {
+            "$ref": "/swagger/partials/like/comment.json"
+        },
+        "/api/v1/posts/{slug}/likes": {
+            "$ref": "/swagger/partials/like/post.json"
+        },
+        "/api/v1/comments/{comment}": {
+            "$ref": "/swagger/partials/comment/update_destroy.json"
+        },
+        "/api/v1/users/{user}/follows": {
+            "$ref": "/swagger/partials/follow/follow.json"
+        },
+        "/api/v1/categories": {
+            "$ref": "/swagger/partials/category/api/category.json"
+        },
+        "/api/v1/categories/{categories}": {
+            "$ref": "/swagger/partials/category/api/showCategory.json"
+        },
+        "/api/v1/search/categories": {
+            "$ref": "/swagger/partials/category/api/searchApi.json"
+        },
+        "/api/v1/collections": {
+            "$ref": "/swagger/partials/collection/indexStore.json"
+        },
+        "/api/v1/topics": {
+            "$ref": "/swagger/partials/topic/topic.json"
+        },
+        "/api/v1/search/topics": {
+            "$ref": "/swagger/partials/topic/searchTopic.json"
+        },
+        "/api/v1/categories/{categoryId}/topics": {
+            "$ref": "/swagger/partials/topic/api/searchWithCategoryIdApi.json"
+        },
+        "/api/v1/posts/{slug}/bookmarks": {
+            "$ref": "/swagger/partials/bookmark/store.json"
+        },
+        "/api/v1/search/histories": {
+            "$ref": "/swagger/partials/search/api/getHistoryApi.json"
+        },
+        "/api/v1/search/destroy": {
+            "$ref": "/swagger/partials/search/api/clearHistoryApi.json"
+        },
+        "/api/v1/search/results/topics": {
+            "$ref": "/swagger/partials/search/api/searchTopicByKeywordApi.json"
+        },
+        "/api/v1/search/results/people": {
+            "$ref": "/swagger/partials/search/api/searchPeopleByKeywordApi.json"
+        },
+        "/api/v1/search/results/users": {
+            "$ref": "/swagger/partials/search/api/searchUserByKeywordApi.json"
+        },
+        "/api/v1/search/results/suggests": {
+            "$ref": "/swagger/partials/search/api/searchSuggestByKeywordApi.json"
+        },
+        "/api/v1/search/results/posts": {
+            "$ref": "/swagger/partials/search/api/searchPostByKeywordApi.json"
+        },
+        "/api/v1/users/{user}/followings": {
+            "$ref": "/swagger/partials/follow/api/followingApi.json"
+        },
+        "/api/v1/users/{user}/followers": {
+            "$ref": "/swagger/partials/follow/api/followerApi.json"
+        },
+        "/api/v1/users/{userId}/posts": {
+            "$ref": "/swagger/partials/post/api/postForUserApi.json"
+        },
+        "/api/v1/search/results/brands": {
+            "$ref": "/swagger/partials/search/api/searchBrandByKeywordApi.json"
+        },
+        "/api/v1/notifications": {
+            "$ref": "/swagger/partials/notification/api/listNotificationApi.json"
+        },
+        "/api/v1/notifications/{notificationId}": {
+            "$ref": "/swagger/partials/notification/api/readNotificationApi.json"
+        },
+        "/api/v1/users/{userId}/posts/liked": {
+            "$ref": "/swagger/partials/post/api/postLikedForUserApi.json"
+        }
+    },
+    "responses": {
+        "Validate": {
+            "description": "The given data was invalid.",
+            "examples": {
+                "application/json": {
+                    "status": 422,
+                    "message": "The given data was invalid.",
+                    "error": {
+                        "email": ["The email field is required."]
+                    }
+                }
+            }
+        },
+        "Unauthorized": {
+            "description": "Unauthorized.",
+            "examples": {
+                "application/json": {
+                    "status": 401,
+                    "message": "Unauthorized!"
+                }
+            }
+        },
+        "NotFound": {
+            "description": "Not Found!"
+        }
+    }
+}

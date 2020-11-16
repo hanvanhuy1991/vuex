@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+    application:
+        container_name: comuni_production_application
+        restart: always
+    workspace:
+        container_name: comuni_production_workspace
+        restart: always
+    php-fpm:
+        container_name: comuni_production_php-fpm
+        restart: always
+    nginx:
+        container_name: comuni_production_nginx
+        restart: always
+        ports:
+            - "80:80"
+            - "443:443"
+    data:
+        container_name: comuni_production_data
+        restart: always
+    logs:
+        container_name: comuni_production_logs
+        restart: always
+    redis:
+        container_name: comuni_production_redis
+        restart: always

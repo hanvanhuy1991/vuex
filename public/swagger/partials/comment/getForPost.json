@@ -1,0 +1,352 @@
+{
+    "get": {
+        "description": "Get Paginate Comment For Post",
+        "tags": ["Comment"],
+        "parameters": [
+            {
+                "name": "slug",
+                "in": "path",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "page",
+                "in": "query",
+                "required": true,
+                "type": "integer"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "List paginate comment by for post.",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "data": [
+                                {
+                                    "id": 104,
+                                    "content": "dinhcuong asdsadasd update",
+                                    "users": {
+                                        "id": 1,
+                                        "name": "Margret Hegmann",
+                                        "avatar": "/tmp/3961f1c849b7c349b63e2f3d9eee8a1d.jpg"
+                                    },
+                                    "created_at": "2020-08-14 08:08:09",
+                                    "total_like": 0,
+                                    "is_liked": 0,
+                                    "images": [
+                                        {
+                                            "id": 23,
+                                            "image_path": "dinhcuong.jpg",
+                                            "width": 0,
+                                            "height": 0
+                                        },
+                                        {
+                                            "id": 24,
+                                            "image_path": "thanhloan.jpg",
+                                            "width": 0,
+                                            "height": 0
+                                        }
+                                    ],
+                                    "child_comments": []
+                                },
+                                {
+                                    "id": 103,
+                                    "content": "dinh cuong adsad",
+                                    "users": {
+                                        "id": 1,
+                                        "name": "Margret Hegmann",
+                                        "avatar": "/tmp/3961f1c849b7c349b63e2f3d9eee8a1d.jpg"
+                                    },
+                                    "created_at": "2020-08-14 08:04:18",
+                                    "total_like": 0,
+                                    "is_liked": 0,
+                                    "images": [
+                                        {
+                                            "id": 21,
+                                            "image_path": "dinhcuong.jpg",
+                                            "width": 0,
+                                            "height": 0
+                                        },
+                                        {
+                                            "id": 22,
+                                            "image_path": "thanhloan.jpg",
+                                            "width": 0,
+                                            "height": 0
+                                        }
+                                    ],
+                                    "child_comments": []
+                                },
+                                {
+                                    "id": 102,
+                                    "content": "dinh cuong adsad",
+                                    "users": {
+                                        "id": 1,
+                                        "name": "Margret Hegmann",
+                                        "avatar": "/tmp/3961f1c849b7c349b63e2f3d9eee8a1d.jpg"
+                                    },
+                                    "created_at": "2020-08-14 07:55:54",
+                                    "total_like": 0,
+                                    "is_liked": 0,
+                                    "images": [],
+                                    "child_comments": []
+                                },
+                                {
+                                    "id": 101,
+                                    "content": null,
+                                    "users": {
+                                        "id": 1,
+                                        "name": "Margret Hegmann",
+                                        "avatar": "/tmp/3961f1c849b7c349b63e2f3d9eee8a1d.jpg"
+                                    },
+                                    "created_at": "2020-08-14 07:53:57",
+                                    "total_like": 0,
+                                    "is_liked": 0,
+                                    "images": [],
+                                    "child_comments": []
+                                },
+                                {
+                                    "id": 5,
+                                    "content": "Sed ab voluptatem rerum placeat odio natus.",
+                                    "users": {
+                                        "id": 5,
+                                        "name": "Miss Maye Grady",
+                                        "avatar": "/tmp/5b5316c7bd46306e3d8ce3435edbf279.jpg"
+                                    },
+                                    "created_at": "2020-08-12 03:39:26",
+                                    "total_like": 3,
+                                    "is_liked": 1,
+                                    "images": [
+                                        {
+                                            "id": 4,
+                                            "image_path": "/tmp/2a4ef04d46790271af1830ccc05691c3.jpg",
+                                            "width": 0,
+                                            "height": 0
+                                        }
+                                    ],
+                                    "child_comments": [
+                                        {
+                                            "id": 13,
+                                            "content": "Quam cumque quia veniam nemo qui hic alias.",
+                                            "users": {
+                                                "id": 1,
+                                                "name": "Margret Hegmann",
+                                                "avatar": "/tmp/3961f1c849b7c349b63e2f3d9eee8a1d.jpg"
+                                            },
+                                            "created_at": "2020-08-12 03:39:26",
+                                            "total_like": 1,
+                                            "is_liked": 1
+                                        },
+                                        {
+                                            "id": 24,
+                                            "content": "Deleniti est amet quia ut cumque.",
+                                            "users": {
+                                                "id": 8,
+                                                "name": "Prof. Susie Blanda III",
+                                                "avatar": null
+                                            },
+                                            "created_at": "2020-08-12 03:39:26",
+                                            "total_like": 2,
+                                            "is_liked": 0
+                                        },
+                                        {
+                                            "id": 64,
+                                            "content": "Facilis nostrum repellat et non.",
+                                            "users": {
+                                                "id": 8,
+                                                "name": "Prof. Susie Blanda III",
+                                                "avatar": null
+                                            },
+                                            "created_at": "2020-08-12 03:39:26",
+                                            "total_like": 0,
+                                            "is_liked": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 9,
+                                    "content": "Provident illo est et et vel.",
+                                    "users": {
+                                        "id": 5,
+                                        "name": "Miss Maye Grady",
+                                        "avatar": "/tmp/5b5316c7bd46306e3d8ce3435edbf279.jpg"
+                                    },
+                                    "created_at": "2020-08-12 03:39:26",
+                                    "total_like": 1,
+                                    "is_liked": 1,
+                                    "images": [],
+                                    "child_comments": [
+                                        {
+                                            "id": 16,
+                                            "content": "Magnam sit facere molestiae magnam aut.",
+                                            "users": {
+                                                "id": 3,
+                                                "name": "Jaren Koss",
+                                                "avatar": null
+                                            },
+                                            "created_at": "2020-08-12 03:39:26",
+                                            "total_like": 2,
+                                            "is_liked": 1
+                                        },
+                                        {
+                                            "id": 42,
+                                            "content": "Rerum eligendi ea voluptatibus esse doloribus.",
+                                            "users": {
+                                                "id": 1,
+                                                "name": "Margret Hegmann",
+                                                "avatar": "/tmp/3961f1c849b7c349b63e2f3d9eee8a1d.jpg"
+                                            },
+                                            "created_at": "2020-08-12 03:39:26",
+                                            "total_like": 0,
+                                            "is_liked": 0
+                                        },
+                                        {
+                                            "id": 51,
+                                            "content": "Quos ut incidunt aperiam consequuntur.",
+                                            "users": {
+                                                "id": 3,
+                                                "name": "Jaren Koss",
+                                                "avatar": null
+                                            },
+                                            "created_at": "2020-08-12 03:39:26",
+                                            "total_like": 0,
+                                            "is_liked": 0
+                                        },
+                                        {
+                                            "id": 62,
+                                            "content": "Nisi voluptatum est quam aspernatur quia.",
+                                            "users": {
+                                                "id": 5,
+                                                "name": "Miss Maye Grady",
+                                                "avatar": "/tmp/5b5316c7bd46306e3d8ce3435edbf279.jpg"
+                                            },
+                                            "created_at": "2020-08-12 03:39:26",
+                                            "total_like": 0,
+                                            "is_liked": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 49,
+                                    "content": "In sunt dolor atque reprehenderit.",
+                                    "users": {
+                                        "id": 10,
+                                        "name": "Benjamin Beatty",
+                                        "avatar": null
+                                    },
+                                    "created_at": "2020-08-12 03:39:26",
+                                    "total_like": 0,
+                                    "is_liked": 0,
+                                    "images": [],
+                                    "child_comments": []
+                                }
+                            ],
+                            "links": {
+                                "first": "http://unic.cms.test/api/v1/posts/1/comments?page=1",
+                                "last": "http://unic.cms.test/api/v1/posts/1/comments?page=1",
+                                "prev": null,
+                                "next": null
+                            },
+                            "meta": {
+                                "current_page": 1,
+                                "from": 1,
+                                "last_page": 1,
+                                "path": "http://unic.cms.test/api/v1/posts/1/comments",
+                                "per_page": 20,
+                                "to": 7,
+                                "total": 7
+                            }
+                        }
+                    }
+                },
+                "schema": {
+                    "$ref": "/swagger/partials/comment/getForPostResource.json"
+                }
+            },
+            "401": {
+                "$ref": "#/responses/Unauthorized"
+            }
+        }
+    },
+    "post": {
+        "description": "Store comment \n Note: \n - If store without image or video, response haven\\'t image object or video object \n - If store with video, width_video and height_video is required",
+        "tags": ["Comment"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "slug",
+                "in": "path",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "parent_id",
+                "in": "formData",
+                "required": false,
+                "type": "integer"
+            },
+            {
+                "name": "content",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "image",
+                "in": "formData",
+                "required": false,
+                "type": "file"
+            },
+            {
+                "name": "video",
+                "in": "formData",
+                "required": false,
+                "type": "file"
+            },
+            {
+                "name": "width_video",
+                "in": "formData",
+                "required": false,
+                "type": "integer"
+            },
+            {
+                "name": "height_video",
+                "in": "formData",
+                "required": false,
+                "type": "integer"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Store comment",
+                "schema": {
+                    "$ref": "/swagger/partials/comment/storeResource.json"
+                }
+            },
+            "422": {
+                "description": "Validate",
+                "schema": {
+                    "$ref": "/swagger/partials/common/validate.json"
+                }
+            },
+            "401": {
+                "description": "Validate",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            }
+        }
+    }
+}

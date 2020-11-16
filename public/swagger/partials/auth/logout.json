@@ -1,0 +1,29 @@
+{
+    "post": {
+        "description": "Logout.",
+        "tags": ["Authorization"],
+        "consumes": "application/json",
+        "produces": "application/json",
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Logged out successfully!",
+                "examples": {
+                    "application/json": {
+                        "success": true
+                    }
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

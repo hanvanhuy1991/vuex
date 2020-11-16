@@ -1,0 +1,118 @@
+{
+    "get": {
+        "description": "Get profile.",
+        "tags": ["User"],
+        "responses": {
+            "200": {
+                "description": "Get profile.",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "id": 1,
+                            "name": "your_name",
+                            "avatar": "avatar.jpg",
+                            "description": null,
+                            "email": "example@gmail.com",
+                            "phone": null,
+                            "address": null,
+                            "url": null,
+                            "posts_count": 0,
+                            "followers_count": 0,
+                            "following_count": 0
+                        }
+                    }
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    },
+    "put": {
+        "description": "Update profile.",
+        "tags": ["User"],
+        "parameters": [
+            {
+                "name": "user",
+                "in": "path",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "avatar",
+                "in": "formData",
+                "type": "string"
+            },
+            {
+                "name": "name",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "birthday",
+                "in": "formData",
+                "type": "string"
+            },
+            {
+                "name": "gender",
+                "in": "formData",
+                "type": "string"
+            },
+            {
+                "name": "phone",
+                "in": "formData",
+                "type": "string"
+            },
+            {
+                "name": "address",
+                "in": "formData",
+                "type": "string"
+            },
+            {
+                "name": "url",
+                "in": "formData",
+                "type": "string"
+            },
+            {
+                "name": "description",
+                "in": "formData",
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Update profile.",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "message": "Updated profile successfully!"
+                        }
+                    }
+                }
+            },
+            "422": {
+                "$ref": "/swagger/swagger.json#/responses/Validate"
+            },
+            "403": {
+                "description": "Show error if {user} in URL does not match the id of authenticated user.",
+                "examples": {
+                    "application/json": {
+                        "status": 403,
+                        "data": {
+                            "message": "Forbidden! You do not have permission to access this API."
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

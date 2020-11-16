@@ -1,0 +1,88 @@
+{
+    "put": {
+        "description": "Update comment",
+        "tags": ["Comment"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "comment",
+                "in": "path",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "content",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Update comment",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "id": 104,
+                            "parent_id": null,
+                            "user_id": 1,
+                            "content": "asdsadasdasd2q32qe",
+                            "created_at": "2020-08-14 08:08:09",
+                            "updated_at": "2020-08-21 06:25:06",
+                            "deleted_at": null,
+                            "created_by": 1,
+                            "updated_by": null,
+                            "deleted_by": null
+                        }
+                    }
+                },
+                "schema": {
+                    "$ref": "/swagger/partials/comment/updateResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    },
+    "delete": {
+        "description": "Delete comment",
+        "tags": ["Comment"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "comment",
+                "in": "path",
+                "required": true,
+                "type": "integer"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Delete comment",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "success": true
+                        }
+                    }
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

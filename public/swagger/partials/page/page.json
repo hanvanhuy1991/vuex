@@ -1,0 +1,26 @@
+{
+    "get": {
+        "description": "Get Page with type. rule type = 1 is Term & Condition page, type = 2 is About app page.",
+        "tags": ["Authorization"],
+        "parameters": [{
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "integer"
+        }],
+        "responses": {
+            "200": {
+                "description": "Send request succesfuly.",
+                "schema": {
+                    "$ref": "/swagger/partials/page/pageResource.json"
+                }
+            },
+            "404": {
+                "description": "Show error if type does not exists.",
+                "schema": {
+                    "$ref": "/swagger/partials/page/page404Resource.json"
+                }
+            }
+        }
+    }
+}

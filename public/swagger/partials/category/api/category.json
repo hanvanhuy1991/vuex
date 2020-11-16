@@ -1,0 +1,31 @@
+{
+    "get": {
+        "description": "Get Category with topic",
+        "tags": ["Category"],
+        "parameters": [{
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+        }, {
+            "name": "hotest",
+            "in": "query",
+            "required": true,
+            "type": "string"
+        }],
+        "responses": {
+            "200": {
+                "description": "Get api Successfuly",
+                "schema": {
+                    "$ref": "/swagger/partials/category/resource/indexResource.json"
+                }
+            },
+            "401": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "get": {
+        "description": "List notification with type. \n Params: \n - type in [like, comment, followUser] \n",
+        "tags": ["Notifications"],
+        "parameters": [{
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+        }, {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "string"
+        }, {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "string"
+        }],
+        "responses": {
+            "200": {
+                "description": "List notifications",
+                "schema": {
+                    "$ref": "/swagger/partials/notification/resource/listResource.json"
+                }
+            },
+            "401": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            }
+        }
+    }
+}

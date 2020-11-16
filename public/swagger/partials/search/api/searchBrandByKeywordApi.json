@@ -1,0 +1,46 @@
+{
+    "get": {
+        "description": "Get paginate brand by keyword. \n Note: \n - priority in [first, second, third] \n - If priority is first, we will search absolute \n - If priority is second, we will search like keyword \n - If priority is third, we will search like keyword character",
+        "tags": ["Search"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "page",
+                "in": "query",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "keyword",
+                "in": "query",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "priority",
+                "in": "query",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Get paginate brand by keyword.",
+                "schema": {
+                    "$ref": "/swagger/partials/search/resource/searchBrandByKeywordResource.json"
+                }
+            },
+            "422": {
+                "$ref": "/swagger/partials/common/validate.json"
+            },
+            "401": {
+                "$ref": "/swagger/partials/common/unauthorized.json"
+            }
+        }
+    }
+}

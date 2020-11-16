@@ -1,0 +1,41 @@
+{
+    "get": {
+        "description": "Search Topic with categoryId and keyword",
+        "tags": ["Topic"],
+        "parameters": [{
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+        }, {
+            "name": "keyword",
+            "in": "query",
+            "required": true,
+            "type": "string"
+        }, {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+        }, {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "string"
+        }],
+        "responses": {
+            "200": {
+                "description": "Show topic with category id",
+                "schema": {
+                    "$ref": "/swagger/partials/topic/searchResource.json"
+                }
+            },
+            "401": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            }
+        }
+    }
+}

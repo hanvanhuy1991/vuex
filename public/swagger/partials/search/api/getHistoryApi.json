@@ -1,0 +1,25 @@
+{
+    "get": {
+        "description": "Get search history maximum 8 items.",
+        "tags": ["Search"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Get search history maximum 8 items.",
+                "schema": {
+                    "$ref": "/swagger/partials/search/resource/getHistoryResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/partials/common/unauthorized.json"
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "get": {
+        "description": "Get posts with role. \n param: \n - type in [following, discovery] \n - priority in [first, second] \n - sort in [default, latest, hot, unicer, business] \n Note: This is a special API when it has to be divided by 2 priority to get the result.\n1.Posts with at least 1 hashtag coincide with the posts that users are most interested in (like, share, comment, bookmark, search)\n2.The posts do not have the same hashtag but are in the category containing the hashtags of the posts the user is most interested in\n=> Since then when calling API, we will use param priority to divide priority. When using priority = first, it will return the pagination and have the current page and total page, if the current page is equal to the total page, the next call will change priority = second.",
+        "tags": ["Post"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "page",
+                "in": "query",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "priority",
+                "in": "query",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "sort",
+                "in": "query",
+                "required": false,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Get posts with role.",
+                "schema": {
+                    "$ref": "/swagger/partials/post/resource/discoveryResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

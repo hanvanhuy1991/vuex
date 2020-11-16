@@ -1,0 +1,25 @@
+{
+    "delete": {
+        "description": "Delete all search histories",
+        "tags": ["Search"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Delete all search histories.",
+                "schema": {
+                    "$ref": "/swagger/partials/search/resource/clearHistoryResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/partials/common/unauthorized.json"
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "get": {
+        "description": "Search Topic",
+        "tags": ["Topic"],
+        "parameters": [{
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+        }, {
+            "name": "keyword",
+            "in": "query",
+            "required": true,
+            "type": "string"
+        }, {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "string"
+        }],
+        "responses": {
+            "200": {
+                "description": "Search Topic",
+                "schema": {
+                    "$ref": "/swagger/partials/topic/searchResource.json"
+                }
+            },
+            "401": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            }
+        }
+    }
+}

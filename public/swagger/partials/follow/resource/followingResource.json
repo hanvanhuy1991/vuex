@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "status": {
+            "type": "integer"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "xml": {
+                        "wrapped": true
+                    },
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "avatar": {
+                                "type": "string"
+                            },
+                            "is_business_account": {
+                                "type": "boolean"
+                            },
+                            "total_followers": {
+                                "type": "integer"
+                            },
+                            "is_followed": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

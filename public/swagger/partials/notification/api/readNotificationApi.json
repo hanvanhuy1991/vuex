@@ -1,0 +1,37 @@
+{
+    "get": {
+        "description": "Read notifications",
+        "tags": ["Notifications"],
+        "parameters": [{
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+        }, {
+            "name": "notificationId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+        }],
+        "responses": {
+            "200": {
+                "description": "Read notification successfully",
+                "schema": {
+                    "$ref": "/swagger/partials/notification/resource/readResource.json"
+                }
+            },
+            "401": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            },
+            "404": {
+                "description": "Not found.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/notFound.json"
+                }
+            }
+        }
+    }
+}

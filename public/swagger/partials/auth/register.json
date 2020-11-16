@@ -1,0 +1,82 @@
+{
+    "post": {
+        "description": "Register.",
+        "tags": ["Authorization"],
+        "parameters": [{
+                "name": "name",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "email",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "phone",
+                "in": "formData",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "birthday",
+                "in": "formData",
+                "required": true,
+                "type": "string",
+                "format": "date"
+            },
+            {
+                "name": "gender",
+                "in": "formData",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "interested_in",
+                "in": "formData",
+                "required": false,
+                "type": "array",
+                "items": {}
+            },
+            {
+                "name": "token_device",
+                "in": "formData",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "password_confirmation",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "If there is no error after registering.",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "message": "Created user successfully!",
+                        "data": {
+                            "access_token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzRhYjM1M2ZhYTQ3ZmNlMjk2MTA4Y2U3YjZjZjkwYmJkNWNjY2ZhNWRlOGM4MzdlNzBjNjA1MjM2OGE0NDhjZTI3Y2I2ODMwYTlhZjM1NTYiLCJpYXQiOjE1OTc5Nzg3MzMsIm5iZiI6MTU5Nzk3ODczMywiZXhwIjoxNjEzODc2MzI1LCJzdWIiOiI0NyIsInNjb3BlcyI6W119.bZ2QuLrmsbHctjqmXBKE4XFEkRXbcGeOKC66QriYKx8TMeHuC3hAIAmnxRG7kn1KqoxdlUR-IeX7VsjlGz-KIP1ofiv_r2xNfgrbAni3BdD89BzrGziqLIFCz6x-hNeBChOsyWqnSL8idgOwVrJ4rAhBpA0PVRvgY_OEuyiH1OXMzNX5P239waPQ9WbOYFBpfN0-A_SU7NIkf6O4xTCLxMrMLSMtefibX5Xw_32uFceKkR3uvPrK7-TpcMNb9VOdqmbpNfE06Me6RkombTamZrbv7ePJWIQSiP36aDJB37TbH8k6T1gsS-4W_f_nRB2r98ckcbhXj52LVyNIjEkCDVLt63LGZWnUGwbPkLXViN2xq37GflRdfFayOR70oC33oDn2kodiJkOZ-kPcnQZQcMH-p0bFKFMX2uwQFjwkIuIGpKCjhUHpyKjJoReccECmpId-Wx-pF086v6AHNqic8YI0RsCrBoMmcXquI9RLQ-TzQaj0x-IJ6PPcda1-fyQuIx4BL52WM2jS4Y_Lc4nTdVpSW_tr3xMoW0oNHT5cQ-pLYrCnAd5RA7oNKIJTlx9H8Q3mEQhmogKVJ6tyU_VpiHz7q_ZfM988j52ysdLPiNr90ScwT5YaoxKhf5BRN8BH0yR7TZaS2iyTbu8DmpYw-0rcFMGDatGyWIOgEGuzlws",
+                            "token_type": "Bearer",
+                            "expires_at": "2021-02-21 02:58:45"
+                        }
+                    }
+                }
+            },
+            "422": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

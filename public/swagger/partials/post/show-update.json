@@ -1,0 +1,161 @@
+{
+    "get": {
+        "description": "Get Post By Slug",
+        "tags": ["Post"],
+        "parameters": [
+            {
+                "name": "slug",
+                "in": "path",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Show post detail.",
+                "examples": {
+                    "id": 1,
+                    "hash_tags": [
+                        {
+                            "id": 10,
+                            "name": "Officiis.",
+                            "topic_id": 1
+                        },
+                        {
+                            "id": 12,
+                            "name": "Tempora.",
+                            "topic_id": 3
+                        }
+                    ],
+                    "title": "Prof.",
+                    "content": "Incidunt voluptatem non reprehenderit culpa. Sunt ad veritatis quia necessitatibus neque.",
+                    "location": "7089 Durgan Motorway\nPort Julianhaven, AZ 56426",
+                    "users": {
+                        "id": 6,
+                        "name": "Prof. Ludie Pacocha I",
+                        "avatar": null
+                    },
+                    "created_at": "2020-08-19 06:32:41",
+                    "total_views": 68,
+                    "total_likes": 3,
+                    "total_shares": 4,
+                    "total_bookmarks": 0,
+                    "total_comments": 14,
+                    "is_liked": 0,
+                    "is_bookmarked": 0,
+                    "media_type": "video",
+                    "is_business_account": 1,
+                    "images": [],
+                    "videos": [
+                        {
+                            "id": 8,
+                            "video_path": "/tmp/71cc177010d425f3a9d143963bbd069f.jpg",
+                            "width": 0,
+                            "height": 0
+                        }
+                    ]
+                },
+                "schema": {
+                    "$ref": "/swagger/partials/post/showResource.json"
+                }
+            },
+            "401": {
+                "$ref": "#/responses/Unauthorized"
+            }
+        }
+    },
+    "put": {
+        "description": "Update post.",
+        "tags": ["Post"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "id",
+                "in": "path",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "title",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "content",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "location_name",
+                "in": "formData",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "location_lat",
+                "in": "formData",
+                "required": false,
+                "type": "number"
+            },
+            {
+                "name": "location_long",
+                "in": "formData",
+                "required": false,
+                "type": "number"
+            },
+            {
+                "name": "hash_tag_ids",
+                "in": "formData",
+                "required": false,
+                "type": "integer"
+            },
+            {
+                "name": "deleted_s3_images",
+                "in": "formData",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "deleted_s3_videos",
+                "in": "formData",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "file",
+                "in": "formData",
+                "required": false,
+                "type": "file"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "If there is no error after creating post.",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "data": {
+                            "message": "Updated post successfully!"
+                        }
+                    }
+                }
+            },
+            "422": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

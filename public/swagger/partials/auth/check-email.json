@@ -1,0 +1,39 @@
+{
+    "get": {
+        "description": "Check email exist.",
+        "tags": ["Authorization"],
+        "consumes": "application/json",
+        "produces": "application/json",
+        "parameters": [
+            {
+                "name": "email",
+                "in": "query",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "The email no exist.",
+                "examples": {
+                    "application/json": {
+                        "status": 200,
+                        "message": "The email no exist."
+                    }
+                }
+            },
+            "422": {
+                "description": "The email has already been taken.",
+                "examples": {
+                    "application/json": {
+                        "status": 422,
+                        "message": "The given data was invalid.",
+                        "error": {
+                            "email": ["The email has already been taken."]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "status": {
+            "type": "integer"
+        },
+        "data": {
+            "type": "array",
+            "xml": {
+                "wrapped": true
+            },
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "image": {
+                        "type": "string"
+                    },
+                    "topics": {
+                        "type": "array",
+                        "xml": {
+                            "wrapped": true
+                        },
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "category_id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "point": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

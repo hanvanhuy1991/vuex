@@ -1,0 +1,46 @@
+{
+    "post": {
+        "description": "Action bookmark / unbookmark",
+        "tags": ["Bookmark"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "slug",
+                "in": "path",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "is_bookmarked",
+                "in": "formData",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "collection_id",
+                "in": "formData",
+                "required": false,
+                "type": "integer"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Action Successfully",
+                "schema": {
+                    "$ref": "/swagger/partials/bookmark/storeResource.json"
+                }
+            },
+            "401": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            }
+        }
+    }
+}

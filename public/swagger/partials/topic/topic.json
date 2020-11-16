@@ -1,0 +1,70 @@
+{
+    "post": {
+        "description": "Store Topic with category",
+        "tags": ["Topic"],
+        "parameters": [{
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+        }, {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+                "$ref": "/swagger/partials/topic/storeBody.json"
+
+            }
+        }],
+        "responses": {
+            "200": {
+                "description": "Store Topic with Category Successfuly",
+                "schema": {
+                    "$ref": "/swagger/partials/topic/storeResource.json"
+                }
+            },
+            "401": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            },
+            "404": {
+                "description": "Not Found.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/notFound.json"
+                }
+            },
+            "422": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/validate.json"
+                }
+            }
+        }
+    },
+    "get": {
+        "description": "Get Hot Ranking Topic",
+        "tags": ["Topic"],
+        "parameters": [{
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+        }],
+        "responses": {
+            "200": {
+                "description": "Get Hot Ranking Topic Successfuly",
+                "schema": {
+                    "$ref": "/swagger/partials/topic/resource/hotRankingResource.json"
+                }
+            },
+            "401": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            }
+        }
+    }
+}

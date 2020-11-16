@@ -1,0 +1,119 @@
+{
+    "type": "object",
+    "properties": {
+        "status": {
+            "type": "integer"
+        },
+        "data": {
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "xml": {
+                        "wrapped": true
+                    },
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "data": {
+                                "type": "array",
+                                "xml": {
+                                    "wrapped": true
+                                },
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "title": {
+                                            "type": "string"
+                                        },
+                                        "redirect_to": {
+                                            "type": "string"
+                                        },
+                                        "body": {
+                                            "type": "array",
+                                            "xml": {
+                                                "wrapped": true
+                                            },
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "image_user": {
+                                                        "type": "string"
+                                                    },
+                                                    "thumnail": {
+                                                        "type": "string"
+                                                    },
+                                                    "time_like": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "reat_at": {
+                                "type": "string"
+                            },
+                            "view_at": {
+                                "type": "string"
+                            },
+                            "create_at": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "prev": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        }
+                    }
+
+                },
+                "meta": {
+                    "type": "object",
+                    "properties": {
+                        "current_page": {
+                            "type": "integer"
+                        },
+                        "from": {
+                            "type": "string"
+                        },
+                        "last_page": {
+                            "type": "string"
+                        },
+                        "path": {
+                            "type": "string"
+                        },
+                        "per_page": {
+                            "type": "integer"
+                        },
+                        "to": {
+                            "type": "integer"
+                        },
+                        "total": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

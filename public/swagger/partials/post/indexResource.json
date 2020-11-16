@@ -1,0 +1,96 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "hash_tags": {
+            "type": "array",
+            "xml": {
+                "wrapped": true
+            },
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "category_id": {
+                        "type": "integer"
+                    },
+                    "point": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "title": {
+            "type": "string"
+        },
+        "content": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "users": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "avatar": {
+                    "type": "string"
+                },
+                "is_business_account": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "created_at": {
+            "type": "string"
+        },
+        "total_views": {
+            "type": "integer"
+        },
+        "total_likes": {
+            "type": "integer"
+        },
+        "total_shares": {
+            "type": "integer"
+        },
+        "total_bookmarks": {
+            "type": "integer"
+        },
+        "total_comments": {
+            "type": "integer"
+        },
+        "is_liked": {
+            "type": "boolean"
+        },
+        "is_bookmarked": {
+            "type": "boolean"
+        },
+        "media_type": {
+            "type": "string"
+        },
+        "thumbnail": {
+            "type": "string"
+        },
+        "thumbnail_width": {
+            "type": "integer"
+        },
+        "thumbnail_height": {
+            "type": "integer"
+        }
+    }
+}

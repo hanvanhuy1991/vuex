@@ -1,0 +1,96 @@
+{
+    "type": "object",
+    "properties": {
+        "status": {
+            "type": "integer"
+        },
+        "data": {
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "xml": {
+                        "wrapped": true
+                    },
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "point": {
+                                "type": "integer"
+                            },
+                            "category": {
+                                "type": "array",
+                                "xml": {
+                                    "wrapped": true
+                                },
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "title": {
+                                            "type": "string"
+                                        },
+                                        "image": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "prev": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        }
+                    }
+
+                },
+                "meta": {
+                    "type": "object",
+                    "properties": {
+                        "current_page": {
+                            "type": "integer"
+                        },
+                        "from": {
+                            "type": "string"
+                        },
+                        "last_page": {
+                            "type": "string"
+                        },
+                        "path": {
+                            "type": "string"
+                        },
+                        "per_page": {
+                            "type": "integer"
+                        },
+                        "to": {
+                            "type": "integer"
+                        },
+                        "total": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

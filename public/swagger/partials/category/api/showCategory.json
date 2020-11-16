@@ -1,0 +1,39 @@
+{
+    "get": {
+        "description": "Show Category with topic by Id",
+        "tags": ["Category"],
+        "parameters": [{
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "categories",
+                "in": "path",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Get api Successfuly",
+                "schema": {
+                    "$ref": "/swagger/partials/category/resource/indexResource.json"
+                }
+            },
+            "401": {
+                "description": "Unauthorized.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/unauthorized.json"
+                }
+            },
+            "404": {
+                "description": "Not Found.",
+                "schema": {
+                    "$ref": "/swagger/partials/common/notFound.json"
+                }
+            }
+        }
+    }
+}

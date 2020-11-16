@@ -1,0 +1,37 @@
+{
+    "get": {
+        "description": "Get posts liked for user",
+        "tags": ["Post"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "page",
+                "in": "query",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "userId",
+                "in": "path",
+                "required": true,
+                "type": "integer"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Get posts liked for user",
+                "schema": {
+                    "$ref": "/swagger/partials/post/resource/postLikedForUserResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

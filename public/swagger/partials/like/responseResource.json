@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "total_like": {
+            "type": "integer"
+        },
+        "is_liked": {
+            "type": "boolean"
+        },
+        "model_id": {
+            "type": "integer"
+        }
+    }
+}

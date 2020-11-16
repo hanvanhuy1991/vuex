@@ -1,0 +1,43 @@
+{
+    "get": {
+        "description": "Get followers by user",
+        "tags": ["Follow"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "user",
+                "in": "path",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "page",
+                "in": "query",
+                "required": true,
+                "type": "integer"
+            },
+            {
+                "name": "keyword",
+                "in": "query",
+                "required": false,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Get followers by user",
+                "schema": {
+                    "$ref": "/swagger/partials/follow/resource/followerResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/swagger.json#/responses/Unauthorized"
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "status": {
+            "type": "integer"
+        },
+        "message": {
+            "type": "string"
+        },
+        "error": {
+            "type": "object",
+            "properties": {
+                "field_name": {
+                    "type": "array",
+                    "xml": {
+                        "wrapped": true
+                    },
+                    "items": {
+                        "xml": {
+                            "name": "field_name"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

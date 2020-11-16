@@ -1,0 +1,60 @@
+{
+    "get": {
+        "description": "Get paginate collection.",
+        "tags": ["Collection"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "page",
+                "in": "query",
+                "required": true,
+                "type": "integer"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Get paginate collection.",
+                "schema": {
+                    "$ref": "/swagger/partials/collection/indexResource.json"
+                }
+            },
+            "401": {
+                "$ref": "/swagger/partials/common/unauthorized.json"
+            }
+        }
+    },
+    "post": {
+        "description": "Create collection.",
+        "tags": ["Collection"],
+        "parameters": [
+            {
+                "name": "Authorization",
+                "in": "header",
+                "required": true,
+                "type": "string"
+            },
+            {
+                "name": "name",
+                "in": "formData",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "Create collection.",
+                "schema": {
+                    "$ref": "/swagger/partials/collection/storeResource.json"
+                }
+            },
+            "422": {
+                "$ref": "/swagger/partials/common/validate.json"
+            }
+        }
+    }
+}
